@@ -15,7 +15,7 @@ const MovieComponents = () => {
               <p>{release_date}</p>
             </div>
             <div className="card-action">
-              <a href="#">Movie Details</a>
+              <a href={`/movie/${id}`}>Movie Details</a>
             </div>
           </div>
         </div>

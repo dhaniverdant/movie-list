@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setMovies } from "../../redux/actions/movieActions"
+import MovieComponents from "../MovieComponent/MovieComponent";
 
 const MovieList = () => {
   const movies = useSelector((state) => state);
@@ -15,12 +16,10 @@ const MovieList = () => {
 
   useEffect(() => {
     fetchProducts();
-  });
+  }, []);
   console.log("movie list", movies);
 
-  return (
-    <div>MovieList</div>
-  );
+  return <MovieComponents />;
 };
 
 export default MovieList;
